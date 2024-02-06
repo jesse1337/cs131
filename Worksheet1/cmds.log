@@ -1,0 +1,52 @@
+    1  passwd
+    2  wget www.github.com
+    3  pwd
+    4  git init
+    5  git remote add origin https://github.com/jesse1337/cs131.git
+    6  git status
+    7  git add .
+    8  git commit -m "a"
+    9  git push
+   10  git push --set-upstream origin master
+   11  git status
+   12  clear
+   13  wget www.github.com
+   14  touch Worksheet1/readme.txt
+   15  git add Worksheet1/readme.txt
+   16  clear
+   17  git status
+   18  git commit -m "ws1 and setup"
+   19  git config --global user.email jge2k1@gmail.com
+   20  git confic --global user.email Jesse
+   21  git config --global user.name jesse
+   22  git status
+   23  git commit -m "setup"
+   24  git status
+   25  git add .
+   26  git commit -m "set up"
+   27  git push
+   28  git push --set-upstream origin master
+   29  git remote set-url origin https://USERNAME:TOKEN@github.com/USERNAME/REPOSITORY.git
+   30  git push --set-upstream origin master
+   31  jesse1337
+   32  clear
+   33  git push --set-upstream origin master
+   34  git push --set-upstreak origin master
+   35  git push --set-upstream origin master
+   36  git remote set-url origin https://jesse1337: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@github.com/jesse1337/cs131.git
+   37  git add .
+   38  git commit -m "se"
+   39  git push
+   40  git push --set-upstream origin master
+   41  cd
+   42  ls
+   43  git status
+   44  git checkout main
+   45  git fetch origin]
+   46  git fetch origin
+   47  git checkout main
+   48  git status
+   49  ls
+   50  cd worksheet1
+   51  cd Worksheet1
+   52  history > cmds.log
