@@ -1,0 +1,83 @@
+    1  git status
+    2  git commit -m "ws1 and setup"
+    3  git config --global user.email jge2k1@gmail.com
+    4  git confic --global user.email Jesse
+    5  git config --global user.name jesse
+    6  git status
+    7  git commit -m "setup"
+    8  git status
+    9  git add .
+   10  git commit -m "set up"
+   11  git push
+   12  git push --set-upstream origin master
+   13  git remote set-url origin https://USERNAME:TOKEN@github.com/USERNAME/REPOSITORY.git
+   14  git push --set-upstream origin master
+   15  jesse1337
+   16  clear
+   17  git push --set-upstream origin master
+   18  git push --set-upstreak origin master
+   19  git push --set-upstream origin master
+   20  git remote set-url origin https://jesse1337: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@github.com/jesse1337/cs131.git
+   21  git add .
+   22  git commit -m "se"
+   23  git push
+   24  git push --set-upstream origin master
+   25  cd
+   26  ls
+   27  git status
+   28  git checkout main
+   29  git fetch origin]
+   30  git fetch origin
+   31  git checkout main
+   32  git status
+   33  ls
+   34  cd worksheet1
+   35  cd Worksheet1
+   36  history > cmds.log
+   37  ls
+   38  git add .
+   39  git commit -m "ws1"
+   40  https://jesse1337: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@github.com/jesse1337/cs131.git
+   41  git remote -v
+   42  git push
+   43  git status
+   44  git commit -m "cmds"
+   45  git config user.email jge2k1@gmail.com
+   46  git config user.name Jesse
+   47  git commit -m "m"
+   48  git push
+   49  ls
+   50  touch Worksheet2/counts.txt
+   51  git add Worksheet2/counts.txt
+   52  mkdir Worksheet2 | touch Worksheet2/counts.txt
+   53  mkdir Worksheet2
+   54  ls
+   55  cd Worksheet2
+   56  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+   57  ls
+   58  nano Global\ YouTube\ Statistics.csv 
+   59  ls
+   60  cd Worksheet2 | grep "United States" "Global Youtube Statistics.csv" > counts.txt
+   61  cd Worksheet2
+   62  ls
+   63  grep "United States" Global\ YouTube\ Statistics.csv > counts.txt
+   64  nano counts.txt
+   65  grep "Music" Global\ Youtube\ Statistics.csv >> counts.txt
+   66  ls
+   67  grep "Music" Global\ YouTube\ Statistics.csv >> counts.txt
+   68  nano counts.txt
+   69  grep "Music" Global\ YouTube\ Statistics.csv >> numb.txt
+   70  ls
+   71  wc -l counts.txt >> counts.txt
+   72  nano counts.txt
+   73  wc -l numb.txt >> numb.txt
+   74  wc -w numb.txt >> numb.txt
+   75  nano numb.txt
+   76  nano counts.txt
+   77  git status
+   78  git add .
+   79  git commit -m "ws2"
+   80  git push
+   81  git remoote -v
+   82  git remote -v
+   83  history > cmds.log
