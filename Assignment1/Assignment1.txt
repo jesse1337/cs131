@@ -1,0 +1,33 @@
+This text file contains ONLY commands for each question. To see annotations/output, see cmds.log.
+	- The assignemtn problems aren't consistent with problem numbers, but I will list them as they were given (so there will be duplicate numbers).
+
+1. mkdir Assignment1
+
+2. echo $SHELL
+
+2. echo $HOME
+
+3. id
+
+4. mkdir myDir
+   chmod -w myDir
+   cd myDir
+   ls
+   ls -l
+   nano test.txt
+
+5. cd ..
+   mkdir myDir2
+   mkdir myDir3
+
+6. cd myDir2
+   touch myFile.txt
+   cd ..
+   mv myDir2/myFile.txt myDir3
+   cd ..
+
+6. free -m
+
+9. cat /etc/*release*
+
+10. ls -l /etc/*release*

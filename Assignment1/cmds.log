@@ -1,0 +1,94 @@
+ This is the cmds.log annotated for Jesse Ge's Assignment1 submission. 
+ #1. Making directory Assignment1
+  102  mkdir Assignment1
+
+ #2. Echoing current Shell as well as home directory path. Outputs are pasted below each command.
+  103  cd Assignment1
+  104  echo $SHELL
+	## Output: /bin/bash
+  105  echo $HOME
+	## Output: /mnt/scratch/FA23_CS131_Ashish/jessesp24
+ 
+ #3. My UID and groups.
+  106  id
+	## Output: uid=1179(jessesp24) gid=1179(jessesp24) groups=1179(jessesp24),77(S77)
+ 
+ #4. Creating and modifying myDir.
+  107  mkdir myDir
+  108  chmod -w myDir
+  109  cd myDir
+  110  ls
+	## I can. No output because it is empty.
+  111  ls -l
+	## I can. Outpust: total 0
+  112  nano test.txt
+	## When trying to write out to test.txt, I get errr: Permission Denied.
+
+  113  cd Assignment1
+  
+ #5. Creating new directories myDir2 and myDir3.
+  114  mkdir myDir2
+  115  mkdir myDir3
+
+ #6. Creating myFile.txt in myDir2.
+  116  cd myDir2
+  117  touch myFile.txt
+  118  ls
+
+ #6. Moving myFile.txt from myDir2 to myDir3.
+  119  mv myDir2/myFile.txt myDir2/myDir3/
+	## This was incorrect way..
+  120  cd ..
+  121  mv myDir2/myFile.txt myDir2/myDir3/
+	## Also incorrect..
+  122  mv myDir2/myFile.txt myDir3
+	## This was correct -- moved to myDir3.
+  123  cd myDir3
+  124  ls
+	## Checking to see if moved (it did).
+  125  cd ..
+
+ #6. Find total amount of RAM/Memory using free command
+  126  free -m
+	## Output: 
+              total        used        free      shared  buff/cache   available
+Mem:          71367       31763       20817        3505       18787       34641
+Swap:          4119           0        4119
+
+  127  man free
+
+ #9. Find operating system version:
+  128  cat /etc/*release*
+	## Output: 
+NAME="Red Hat Enterprise Linux"
+VERSION="8.6 (Ootpa)"
+ID="rhel"
+ID_LIKE="fedora"
+VERSION_ID="8.6"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="Red Hat Enterprise Linux 8.6 (Ootpa)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:8::baseos"
+HOME_URL="https://www.redhat.com/"
+DOCUMENTATION_URL="https://access.redhat.com/documentation/red_hat_enterprise_linux/8/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 8"
+REDHAT_BUGZILLA_PRODUCT_VERSION=8.6
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="8.6"
+Red Hat Enterprise Linux release 8.6 (Ootpa)
+Red Hat Enterprise Linux release 8.6 (Ootpa)
+cpe:/o:redhat:enterprise_linux:8::baseos
+
+ #10. Finding permission for file contaiing OS version information:
+  129  ls -l /etc/*release*
+	## Output: 
+lrwxrwxrwx. 1 root root 22 Apr  6  2022 /etc/os-release -> ..//usr/lib/os-release
+-rw-r--r--. 1 root root 45 Apr  6  2022 /etc/redhat-release
+lrwxrwxrwx. 1 root root 14 Apr  6  2022 /etc/system-release -> redhat-release
+-rw-r--r--. 1 root root 41 Apr  6  2022 /etc/system-release-cpe
+
+
+
+  130  ls
+  131  history > cmds.log
