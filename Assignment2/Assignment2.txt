@@ -1,0 +1,76 @@
+This text file answers questions of Assignment2; to see all commands used, please see cmds.log.
+
+TASK 1:
+1a. In etc directory, the terminal finds all files in each directory and adds their paths to the text file
+1b. from the command in part a, two.txt will contain all errors trying to complete part a, such as permission denied errors
+
+TASK 2:
+2. 
+As per the Dataset, Top 3 [Month, Year] with the most number of YouTube channels created were :
+1. [March,2006] with 15 channels
+2. [July,2014] with 13 channels
+3. [August,2014] with 12 channels
+
+The commands used: cut, uniq, sort
+cut: cut out the columns I needed from the dataset (in this case, columns 20, 21 corresponded to year, month).
+uniq: count the number of unique instances of each year/month combination.
+sort: sorts the text files that I used to save the data in.
+
+TASK 3:
+3. ps aux | grep 'whoami'
+'ps' find all active processes, and grep ‘whoami’ finds my username. So the command is finding all active processes under my username.
+Output:
+jessesp+ 2073814  0.0  0.0  28736 15168 ?        Ss   Feb22  23:21 /usr/lib/systemd/systemd --user
+jessesp+ 2073816  0.0  0.0 208512 10816 ?        S    Feb22   0:00 (sd-pam)
+jessesp+ 2079027  0.0  0.0   9792  1856 ?        Ss   Feb22   0:00 ssh-agent -s
+jessesp+ 2855449  0.0  0.0  49728 13504 ?        S    15:53   0:00 sshd: jessesp24@pts/0
+jessesp+ 2855450  0.0  0.0  19840  7616 pts/0    Ss   15:53   0:00 -bash
+jessesp+ 2888857  0.0  0.0  49280 10368 ?        S    17:29   0:00 sshd: jessesp24@pts/27
+jessesp+ 2888858  0.0  0.0  19648  7296 pts/27   Ss   17:29   0:00 -bash
+jessesp+ 2890031  0.0  0.0  25344  8000 pts/27   R+   17:32   0:00 ps aux
+jessesp+ 2890032  0.0  0.0   8320  1856 pts/27   S+   17:32   0:00 grep --color=auto whoami
+
+4b. I noticed that there was an extra process, with decsription being 'vim file.txt'
+The process ID is: 2891643
+Output:
+jessesp+ 2073814  0.0  0.0  28736 15168 ?        Ss   Feb22  23:21 /usr/lib/systemd/systemd --user
+jessesp+ 2073816  0.0  0.0 208512 10816 ?        S    Feb22   0:00 (sd-pam)
+jessesp+ 2079027  0.0  0.0   9792  1856 ?        Ss   Feb22   0:00 ssh-agent -s
+jessesp+ 2855449  0.0  0.0  49728 13504 ?        S    15:53   0:00 sshd: jessesp24@pts/0
+jessesp+ 2855450  0.0  0.0  19840  7616 pts/0    Ss   15:53   0:00 -bash
+jessesp+ 2886603  0.0  0.0  11008  6272 pts/0    S+   17:22   0:00 nano Assignment2.txt
+jessesp+ 2888857  0.0  0.0  49280 10368 ?        S    17:29   0:00 sshd: jessesp24@pts/27
+jessesp+ 2888858  0.0  0.0  19648  7296 pts/27   Ss   17:29   0:00 -bash
+jessesp+ 2891643  0.1  0.0  26240 12032 pts/27   S+   17:36   0:00 vim file.txt
+jessesp+ 2891665  0.0  0.0  49280 10368 ?        S    17:36   0:00 sshd: jessesp24@pts/29
+jessesp+ 2891666  0.2  0.0  19648  6912 pts/29   Ss   17:36   0:00 -bash
+jessesp+ 2891793  0.0  0.0  25344  8000 pts/29   R+   17:37   0:00 ps aux
+jessesp+ 2891794  0.0  0.0   8320  1856 pts/29   S+   17:37   0:00 grep --color=auto whoami
+
+4d. I noticed that the particular process disappeared from the list.
+Output:
+jessesp+ 2073814  0.0  0.0  28736 15168 ?        Ss   Feb22  23:21 /usr/lib/systemd/systemd --user
+jessesp+ 2073816  0.0  0.0 208512 10816 ?        S    Feb22   0:00 (sd-pam)
+jessesp+ 2079027  0.0  0.0   9792  1856 ?        Ss   Feb22   0:00 ssh-agent -s
+jessesp+ 2855449  0.0  0.0  49728 13504 ?        S    15:53   0:00 sshd: jessesp24@pts/0
+jessesp+ 2855450  0.0  0.0  19840  7616 pts/0    Ss   15:53   0:00 -bash
+jessesp+ 2886603  0.0  0.0  11008  6272 pts/0    S+   17:22   0:00 nano Assignment2.txt
+jessesp+ 2888857  0.0  0.0  49280 10368 ?        S    17:29   0:00 sshd: jessesp24@pts/27
+jessesp+ 2888858  0.0  0.0  19648  7296 pts/27   Ss+  17:29   0:00 -bash
+jessesp+ 2891665  0.0  0.0  49280 10368 ?        S    17:36   0:00 sshd: jessesp24@pts/29
+jessesp+ 2891666  0.0  0.0  19648  7296 pts/29   Ss   17:36   0:00 -bash
+jessesp+ 2892431  0.0  0.0  25344  8000 pts/29   R+   17:39   0:00 ps aux
+jessesp+ 2892432  0.0  0.0   8320  1792 pts/29   S+   17:39   0:00 grep --color=auto whoami
+
+TASK 5:
+5. The init process is systemd, which is the FIRST process (1).
+Command: ps -p 1
+Output:
+    PID TTY          TIME CMD
+      1 ?        13:48:23 systemd
+
+
+6. ps aux
+
+The command ‘ps’ is used to find active processes. The second part of the command ‘aux’ is used to describe the process to find; ‘a’ means all users. The ‘u’ creates better formatting - like columns - so it is easier to read. The ‘x’ ensures inclusion of additional processes that are separate from the terminal.
+
