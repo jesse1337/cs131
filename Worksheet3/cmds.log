@@ -1,0 +1,52 @@
+    1  mkdir Worksheet3
+    2  cd Worksheet3
+    3  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+    4  cut -d ',' -f 8,16 > cut.csv
+    5  ls
+    6  nano cut.csv
+    7  cut -d ',' -f 8,16 Global\ YouTube\ Statistics.csv  > cut.csv
+    8  nano cut.csv
+    9  grep -E 'United States|United Kingdom|India' cut.csv | sort -t',' -k2 -nr > earnings_sorted.csv
+   10  nano earnings_sorted.csv 
+   11  cut -d ',' -f 2,8,16 Global\ YouTube\ Statistics.csv  > cut.csv
+   12  nano cut.csv
+   13  grep -E 'United States|United Kingdom|India' cut.csv | sort -t',' -k2 -nr > earnings_sorted.csv
+   14  nano earnings_sorted.csv 
+   15  grep -E ',(United States|United Kingdom|India),' earnings.csv | sort -t',' -k3 -nr > sorted_earnings.csv
+   16  grep -E ',(United States|United Kingdom|India),' cut.csv | sort -t',' -k3 -nr > sorted.csv
+   17  nano sorted.csv
+   18  grep -E ',United States,' cut.csv | head -n 1 > highest.csv
+   19  nano highest.csv
+   20   grep -E ',United States,' sorted.csv | head -n 1 > highest.csv
+   21  nano highest.csv
+   22  grep -E ',United Kingdom,' sorted.csv | head -n 1 >> highest.csv
+   23  grep -E ',India,' sorted.csv | head -n 1 >> highest.csv
+   24  nano highest.csv
+   25   
+   26  clear
+   27  sort -t',' -k3 -nr Global\ YouTube\ Statistics.csv  > task2.csv
+   28  nano task2.csv
+   29  cut -d ',' -f 2,3,5 task2.csv
+   30  cut -d ',' -f 2,3,5 task2.csv > task2.csv
+   31  grep -E 'Sports' task2.csv | head -n 1 > t2highest.csv
+   32  grep -E 'Education' task2.csv | head -n 1 >> t2highest.csv
+   33  grep -E 'Entertainment' task2.csv | head -n 1 >> t2highest.csv
+   34  nano t2highest.csv
+   35  grep -E 'Entertainment' task2.csv | head -n 1
+   36  clear
+   37  nano task2.csv
+   38  sort -t',' -k3 -nr Global\ YouTube\ Statistics.csv  > task2.csv
+   39  nano task2.csv
+   40  cut -d ',' -f 2,3,5 task2.csv > task2cut.csv
+   41  nano task2cut.csv
+   42  grep -E ',Sports' task2cut.csv | head -n 1 > 2sorted.csv
+   43  nano 2sorted.csv
+   44  grep -E ',Education' task2cut.csv | head -n 1 >> 2sorted.csv
+   45  grep -E ',Entertainment' task2cut.csv | head -n 1 >> 2sorted.csv
+   46  nano 2sorted.csv
+   47  ls
+   48  cat highest.csv
+   49  cat highest.csv > ws3.txt
+   50  cat 2sorted.csv >> ws3.txt
+   51  nano ws3.txt
+   52  history > cmds.log

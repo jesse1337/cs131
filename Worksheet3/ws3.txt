@@ -1,0 +1,17 @@
+Below are the two outputs of the final files used to complete the text. 
+
+In highest.csv, I have the top earning of US, UK, and India.
+The format is:
+
+CHANNEL, COUNTRY, MONTHLY EARNINGS:
+DaFuq!?Boom!,United States,9200000
+Woody & Kleiny,United Kingdom,2000000
+T-Series,India,9000000
+
+In 2sorted.csv, I have the top subscribed channels of Sports, Education, and Entertainment categories.
+The format is:
+CHANNEL, SUBSCRIBERS, CATEGORY
+
+WWE,96000000,Sports
+Pinkfong Baby Shark - Kids' Songs & Stories,68200000,Education
+MrBeast,166000000,Entertainment
