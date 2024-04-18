@@ -1,0 +1,197 @@
+Commands and outputs for Assignment 3:
+
+Task 1:
+Command: wc -l last.fake
+Output: 507 last.fake
+
+Command: grep 'sp24' last.fake > lastsp24.fake
+
+Command: wc -l lastsp24.fake
+Output: 478 lastsp24.fake
+
+Task 2:
+Command:
+awk '/Sun/ {print $1}' lastsp24.fake | sort | uniq | awk 'BEGIN {print "The list of people who worked on Sunday are:"} {print} END {print "Kudos to these people for putting in the work"}'
+
+Output:
+The list of people who worked on Sunday are:
+aayushsp24
+akashsp24
+billysp24
+breannasp24
+briansp24
+chih-kuosp24
+fnusp24
+gavinsp24
+megansp24
+michellesp24
+swansp24
+xuebosp24
+Kudos to these people for putting in the work
+
+Task 3:
+Command: 
+awk '$2 >= "23:00" || $2 <= "04:00" {print $1}' lastsp24.fake | sort | uniq |awk 'BEGIN {print "Night Owls List:"} {print} END {print "Night Owls are dope. Please ensure you get enough sleep though."}'
+
+Output:
+Night Owls List:
+aarushisp24
+aayushsp24
+acesp24
+ajaysp24
+akashsp24
+albertsp24
+alexsp24
+amansp24
+athishsp24
+atishaysp24
+ayesp24
+benjaminsp24
+bennysp24
+billysp24
+brandonsp24
+breannasp24
+briansp24
+chih-kuosp24
+connersp24
+daosp24
+davidsp24
+diyasp24
+dylansp24
+edisonsp24
+ericsp24
+farihasp24
+fnusp24
+gavinsp24
+georgesp24
+gradysp24
+gursimransp24
+hardiksp24
+jadonsp24
+jaydevsp24
+jessesp24
+jimmysp24
+jonathansp24
+justinsp24
+kevinsp24
+khushisp24
+kobesp24
+madhavsp24
+manassp24
+matthewsp24
+maysp24
+megansp24
+michellesp24
+nhatsp24
+nicholsonsp24
+nicolesp24
+piercesp24
+pratiksp24
+rickysp24
+robertosp24
+robertsp24
+ronsp24
+sandrasp24
+sangsp24
+sheelsp24
+sunidhisp24
+swansp24
+taliasp24
+tanishasp24
+tylermsp24
+tylersp24
+vaikuntamsp24
+xiaokesp24
+xuebosp24
+yelinsp24
+zakisp24
+Night Owls are dope. Please ensure you get enough sleep though.
+
+Task 4:
+Command:
+awk '$2 >= "05:00" && $2 <= "09:00" {print $1}' lastsp24.fake | sort | uniq |awk 'BEGIN {print "Early Birds List:"} {print} END {print "Early Birds are dope. Please ensure you get enough sleep though."}'
+
+Output:
+Early Birds List:
+Early Birds are dope. Please ensure you get enough sleep though.
+
+Task 5:
+Command:
+awk -F: '/^t/ {print $1}' lastsp24.fake
+
+Output:
+tylersp24 pts/10       172.29.96.22     Tue Apr  9 22
+tylersp24 pts/10                        Tue Apr  9 22
+tylersp24 pts/10                        Tue Apr  9 22
+tylersp24 pts/1                         Tue Apr  9 21
+tylersp24 pts/27       172.29.96.22     Tue Apr  9 21
+tylersp24 pts/37       172.29.96.107    Tue Apr  9 16
+tylersp24 pts/37       172.29.96.107    Tue Apr  9 16
+tylermsp24 pts/27       172.29.96.106    Tue Apr  9 16
+tylermsp24 pts/42       172.29.96.22     Mon Apr  8 22
+tylermsp24 pts/42                        Mon Apr  8 21
+tylermsp24 pts/38                        Mon Apr  8 20
+tylermsp24 pts/28       172.29.96.19     Mon Apr  8 20
+tylermsp24 pts/8                         Mon Apr  8 00
+tylermsp24 pts/8                         Mon Apr  8 00
+tylermsp24 pts/4        172.29.96.97     Mon Apr  8 00
+taliasp24 pts/1                         Sat Apr  6 19
+taliasp24 pts/1                         Sat Apr  6 19
+taliasp24 pts/1                         Sat Apr  6 19
+taliasp24 pts/1                         Sat Apr  6 19
+taliasp24 pts/1                         Sat Apr  6 18
+taliasp24 pts/10                        Sat Apr  6 17
+taliasp24 pts/8        172.29.96.86     Sat Apr  6 17
+taliasp24 pts/4                         Sat Apr  6 16
+taliasp24 pts/4                         Sat Apr  6 16
+taliasp24 pts/1        172.29.96.86     Sat Apr  6 16
+tylersp24 pts/32       172.29.96.67     Thu Mar 28 16
+tylermsp24 pts/4        172.29.96.63     Thu Mar 28 16
+tylermsp24 pts/36       172.29.96.37     Wed Mar 27 02
+tylermsp24 pts/28       172.29.96.44     Wed Mar 27 01
+tylersp24 pts/28       172.29.96.37     Wed Mar 27 00
+tanishasp24 pts/17       172.29.96.39     Wed Mar 27 00
+tylersp24 pts/34       172.29.96.40     Wed Mar 27 00
+tylersp24 pts/1        172.29.96.37     Wed Mar 27 00
+tylersp24 pts/28       172.29.96.40     Tue Mar 26 22
+tylermsp24 pts/17       172.29.96.1      Tue Mar 26 16
+tylersp24 pts/10       172.29.97.254    Tue Mar 26 16
+tylersp24 pts/29       172.29.97.222    Thu Mar 21 16
+
+Task 6:
+Command:
+awk -F: '/^a/ && $3 % 2 == 0 {print $1}' passwd.fake
+
+Output:
+angie23fa
+areebah23fa
+apple23fa
+ajay23fa
+alan23fa
+amreenf23
+acesp24
+akashsp24
+ayesp24
+alexsp24
+aayushsp24
+ajaysp24
+ashish
+amansp24
+
+Task 7:
+Command:
+sed 's/[a-zA-Z0-9 ]//g' passwd.fake | sort -u
+
+Output:
+-::::-:/://
+-:::::///-://
+-:::::///__/-://
+-:::::/://
+::::-:///://
+:::::///://
+:::::///_/://
+:::::///__/://
+::::://://
+:::::/://
+
+
