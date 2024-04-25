@@ -1,0 +1,37 @@
+# Author: Jesse Ge 014026675   
+
+# Setting up (making directory, getting data file
+    1  mkdir Worksheet5
+    2  cd Worksheet5
+    3  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/Global%20YouTube%20Statistics.csv
+    
+# Creating the script, making it runnable
+    4  nano ws5_script.sh
+    5  chmod +x ws5_script.sh
+    6  ./ws5_script.sh 
+
+# In between these lines was writing the script and testing each function
+...
+
+
+# Testing the script one last time after everything seems to be working...
+   47  ./ws5_script.sh 
+   48  cd 'United States'
+   49  ls
+   50  cd Gaming.txt
+   51  nano Gaming.txt
+   52  cd ..
+
+# Deleting everything, and then re-running script to ensure it is working
+   61  rm -r 'United States'
+   62  rm -r ws5.txt
+   63  ls
+   65  ./ws5_script.sh 
+   66  ls
+
+# It works!
+   67  nano ws5.txt
+
+# Checking if cat works with script so it is readable to grader.
+   68  cat ws5_script.sh
+   69  history > cmds.log

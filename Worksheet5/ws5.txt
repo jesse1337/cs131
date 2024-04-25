@@ -1,0 +1,15 @@
+Comedy.txt: 22
+Education.txt: 17
+Entertainment.txt: 68
+Film & Animation.txt: 12
+Gaming.txt: 26
+Howto & Style.txt: 12
+Music.txt: 73
+nan.txt: 22
+News & Politics.txt: 5
+Nonprofits & Activism.txt: 1
+People & Blogs.txt: 38
+Pets & Animals.txt: 2
+Science & Technology.txt: 6
+Shows.txt: 4
+Sports.txt: 5
